@@ -1,0 +1,13 @@
+
+:root {
+  --color-primary: #ff7a00;
+  --color-dark: #121212;
+  --color-light: #ffffff;
+  --color-gray: #4e4e4e;
+
+  --radius: 14px;
+
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.15);
+
+  --transition: all .3s ease;
+}

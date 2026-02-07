@@ -1,0 +1,399 @@
+/* =====================================================
+   CARRITO - DARK PREMIUM
+===================================================== */
+
+
+/* =====================
+   CONTENEDOR
+===================== */
+
+.carrito {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem 5rem;
+  min-height: 80vh;
+}
+
+
+/* =====================
+   TITULO
+===================== */
+
+.carrito h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 2.5rem;
+
+  font-weight: 700;
+  letter-spacing: .6px;
+
+  color: var(--color-primary);
+}
+
+
+/* =====================
+   LISTA
+===================== */
+
+#listaCarrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* =====================
+   ITEM
+===================== */
+
+.item {
+  background: #1c1c1c;
+
+  border-radius: var(--radius);
+
+  padding: 1.3rem;
+
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 1.2rem;
+
+  align-items: center;
+
+  box-shadow: var(--shadow-soft);
+
+  transition: var(--transition);
+
+  animation: fadeUp .4s ease;
+}
+
+
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.6);
+}
+
+
+/* =====================
+   IMAGEN
+===================== */
+
+.item img {
+  width: 90px;
+  height: 90px;
+
+  object-fit: contain;
+
+  background: #111;
+
+  padding: .5rem;
+
+  border-radius: 12px;
+
+  transition: var(--transition);
+}
+
+
+.item:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =====================
+   INFO
+===================== */
+
+.item .info {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+
+.item .info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  color: var(--color-light);
+}
+
+
+.item .info p {
+  font-size: .9rem;
+  color: #aaa;
+}
+
+
+.item .info strong {
+  margin-top: .2rem;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  color: var(--color-primary);
+}
+
+
+/* =====================
+   ACCIONES
+===================== */
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+/* BOTONES */
+
+.acciones button {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--color-primary);
+
+  color: #000;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  box-shadow: 0 4px 12px rgba(255,122,0,.35);
+}
+
+
+.acciones button:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+
+/* ELIMINAR */
+
+.acciones button:last-child {
+  background: #ff4444;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255,68,68,.4);
+}
+
+
+.acciones button:last-child:hover {
+  filter: brightness(1.15);
+}
+
+
+/* =====================
+   RESUMEN
+===================== */
+
+.resumen {
+  position: sticky;
+  bottom: 0;
+
+  margin-top: 2.5rem;
+
+  background: rgba(20,20,20,.98);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 18px 18px 0 0;
+
+  padding: 1.5rem 1.8rem;
+
+  box-shadow: 0 -10px 30px rgba(0,0,0,.6);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+
+/* TOTAL */
+
+.resumen p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+
+.resumen strong {
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  color: var(--color-primary);
+}
+
+
+/* =====================
+   BOTON CONFIRMAR
+===================== */
+
+#btnWhatsapp {
+  flex: 1;
+  max-width: 260px;
+
+  background: var(--color-primary);
+
+  color: #000;
+
+  border: none;
+  border-radius: 40px;
+
+  padding: .9rem 1.6rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: var(--transition);
+
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(255,122,0,.45);
+}
+
+
+#btnWhatsapp:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(255,122,0,.6);
+}
+
+
+#btnWhatsapp:active {
+  transform: scale(.96);
+}
+
+
+/* DESHABILITADO */
+
+#btnWhatsapp.disabled {
+  background: #444;
+  color: #aaa;
+
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+
+/* =====================
+   CARRITO VACIO
+===================== */
+
+.carrito-vacio {
+  text-align: center;
+
+  padding: 4rem 1rem;
+
+  font-size: 1.2rem;
+
+  color: #999;
+
+  animation: fadeUp .4s ease;
+}
+
+
+.carrito-vacio::before {
+  content: "🛒";
+  display: block;
+
+  font-size: 3rem;
+
+  margin-bottom: .8rem;
+}
+
+
+/* =====================
+   ANIMACIONES
+===================== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+.item.animar {
+  animation: fadeUp .3s ease;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 700px) {
+
+  .item {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+   
+    margin-left: 20px;
+  }
+
+  .acciones {
+    grid-column: 3 / -1;
+
+    flex-direction: row;
+    justify-content: flex-end;
+
+    margin-top: .5rem;
+  }
+
+
+  .resumen {
+    flex-direction: column;
+    text-align: center;
+    
+  }
+
+
+  #btnWhatsapp {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background: #0a0a0a;
+
+  text-align: center;
+
+  padding: 2rem 1rem;
+
+  font-size: .9rem;
+
+  color: var(--color-gray);
+}

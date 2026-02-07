@@ -1,0 +1,309 @@
+/* =====================================================
+   CHECKOUT - DARK PREMIUM
+===================================================== */
+
+
+/* =====================
+   CONTENEDOR
+===================== */
+
+.datos-cliente {
+  max-width: 520px;
+
+  margin: 3rem auto 5rem;
+
+  background: #1c1c1c;
+
+  border-radius: var(--radius);
+
+  padding: 2.5rem 2rem;
+
+  box-shadow: var(--shadow-soft);
+
+  animation: fadeUp .5s ease;
+}
+
+
+/* =====================
+   TITULO
+===================== */
+
+.datos-cliente h3 {
+  text-align: center;
+
+  font-size: 2rem;
+
+  margin-bottom: 2rem;
+
+  color: var(--color-primary);
+
+  letter-spacing: .5px;
+}
+
+
+/* =====================
+   INPUTS
+===================== */
+
+.datos-cliente input,
+.datos-cliente textarea {
+  width: 100%;
+
+  background: #111;
+
+  border: 2px solid transparent;
+
+  border-radius: 12px;
+
+  padding: .9rem 1rem;
+
+  margin-bottom: 1.2rem;
+
+  font-size: .95rem;
+
+  color: var(--color-light);
+
+  transition: var(--transition);
+}
+
+
+.datos-cliente input::placeholder,
+.datos-cliente textarea::placeholder {
+  color: #777;
+}
+
+
+.datos-cliente input:focus,
+.datos-cliente textarea:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  background: #0d0d0d;
+
+  box-shadow: 0 0 0 2px rgba(255,122,0,.15);
+}
+
+
+/* DESHABILITADO */
+
+.datos-cliente input:disabled {
+  background: #222;
+  color: #888;
+}
+
+
+/* =====================
+   ENTREGA
+===================== */
+
+.entrega-box {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+
+.entrega-box label {
+  flex: 1;
+
+  background: #111;
+
+  border-radius: 12px;
+
+  padding: .8rem .5rem;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  border: 2px solid transparent;
+
+  transition: var(--transition);
+
+  color: #ddd;
+
+  font-weight: 500;
+}
+
+
+.entrega-box input {
+  display: none;
+}
+
+
+/* ACTIVO */
+
+.entrega-box input:checked + span,
+.entrega-box label:has(input:checked) {
+  background: var(--color-primary);
+  color: #000;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 6px 18px rgba(255,122,0,.4);
+}
+
+
+/* =====================
+   TEXTAREA
+===================== */
+
+.datos-cliente textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+
+/* =====================
+   BOTON CONFIRMAR
+===================== */
+
+.btn-confirmar {
+  width: 100%;
+
+  margin-top: 1.5rem;
+
+  background: var(--color-primary);
+
+  color: #000;
+
+  border: none;
+
+  border-radius: 40px;
+
+  padding: 1rem;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  box-shadow: 0 8px 22px rgba(255,122,0,.45);
+}
+
+
+.btn-confirmar:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(255,122,0,.6);
+}
+
+
+.btn-confirmar:active {
+  transform: scale(.96);
+}
+
+
+/* =====================
+   VALIDACION
+===================== */
+
+.input-error {
+  border-color: #ff4444 !important;
+  box-shadow: 0 0 0 2px rgba(255,68,68,.2);
+}
+
+
+.error-msg {
+  color: #ff5555;
+  font-size: .85rem;
+  margin-bottom: .8rem;
+}
+
+
+/* =====================
+   TOAST
+===================== */
+
+.toast {
+  position: fixed;
+
+  bottom: 90px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #222;
+
+  color: #fff;
+
+  padding: .8rem 1.4rem;
+
+  border-radius: 12px;
+
+  font-size: .9rem;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: var(--transition);
+
+  z-index: 9999;
+}
+
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+
+/* =====================
+   ANIMACIONES
+===================== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 480px) {
+
+  .datos-cliente {
+    padding: 2rem 1.4rem;
+  }
+
+  .datos-cliente h3 {
+    font-size: 1.7rem;
+  }
+
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background: #0a0a0a;
+
+  text-align: center;
+
+  padding: 2rem 1rem;
+
+  font-size: .9rem;
+
+  color: var(--color-gray);
+}
+

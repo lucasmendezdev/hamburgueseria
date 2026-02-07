@@ -1,0 +1,416 @@
+/* =====================================================
+   INDEX - HAMBURGUESERIA
+===================================================== */
+
+/* =====================
+   VARIABLES EXTRA
+===================== */
+
+:root {
+  --color-primary: #ff7a00;
+  --color-dark: #121212;
+  --color-light: #ffffff;
+  --color-gray: #c2c2c2;
+
+  --radius: 14px;
+
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.15);
+
+  --transition: all .3s ease;
+}
+
+
+/* =====================
+   BASE
+===================== */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 4rem 1.5rem;
+}
+
+h1,h2,h3 {
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+
+/* =====================
+   HEADER
+===================== */
+
+.header {
+  position: sticky;
+  top: 0;
+
+  background: rgba(18,18,18,.95);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
+
+.header__logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__nav a {
+  color: var(--color-light);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.header__nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav-cart {
+  background: var(--color-primary);
+  padding: .4rem .8rem;
+  border-radius: 30px;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+
+/* =====================
+   HERO
+===================== */
+
+.hero {
+  min-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("../assets/img/bg.jpg") center/cover;
+
+  animation: fadeIn 1s ease;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  display: inline-block;
+
+  background: var(--color-primary);
+  color: #000;
+
+  padding: .9rem 2rem;
+
+  border-radius: 40px;
+  font-weight: 600;
+
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero img {
+  max-width: 420px;
+  margin: auto;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+
+/* =====================
+   BENEFICIOS
+===================== */
+
+.beneficios {
+  background: #0d0d0d;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+
+  gap: 2rem;
+  text-align: center;
+}
+
+.beneficio {
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+
+.beneficio p {
+  margin-top: .5rem;
+  font-size: .9rem;
+}
+
+.beneficio:hover {
+  color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+
+/* =====================
+   DESTACADOS
+===================== */
+
+.destacados {
+  background: #141414;
+}
+
+.destacados h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.destacados-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+  gap: 2rem;
+
+  max-width: 1100px;
+  margin: auto;
+}
+
+.destacado-card {
+  background: #1c1c1c;
+
+  border-radius: var(--radius);
+
+  padding: 1.5rem;
+
+  text-align: center;
+
+  box-shadow: var(--shadow-soft);
+
+  transition: var(--transition);
+}
+
+.destacado-card:hover {
+  transform: translateY(-10px);
+}
+
+.destacado-card img {
+  max-height: 160px;
+  margin: auto;
+}
+
+.destacado-card h3 {
+  margin: 1rem 0 .5rem;
+}
+
+.destacado-card p {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.btn-mini {
+  display: inline-block;
+
+  margin-top: 1rem;
+
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+
+  color: var(--color-dark);
+
+  padding: .4rem 1rem;
+  border-radius: 30px;
+
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-mini:hover {
+  background: var(--color-primary);
+  color: #000;
+}
+
+
+/* =====================
+   SOBRE NOSOTROS
+===================== */
+
+.sobre-nosotros {
+  background:
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+    url("../assets/img/local.jpg") center/cover;
+
+  text-align: center;
+}
+
+.sobre-box {
+  max-width: 700px;
+  margin: auto;
+
+  background: rgba(0,0,0,.7);
+
+  padding: 3rem 2rem;
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-soft);
+}
+
+.sobre-box h2 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.sobre-box p {
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
+/* =====================
+   CTA FINAL
+===================== */
+
+.cta-final {
+  background: var(--color-primary);
+  color: #000;
+
+  text-align: center;
+}
+
+.cta-final h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-final .btn-hero {
+  background: #000;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.btn-heropedir {
+  background: #000;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background: #0a0a0a;
+
+  text-align: center;
+
+  padding: 2rem 1rem;
+
+  font-size: .9rem;
+
+  color: var(--color-gray);
+}
+
+
+/* =====================
+   ANIMACIONES
+===================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (min-width: 768px) {
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem 4rem;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+
+  section {
+    padding: 6rem 4rem;
+  }
+
+  .destacados-grid {
+    gap: 3rem;
+  }
+
+}

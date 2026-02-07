@@ -1,0 +1,164 @@
+/* ===============================
+ CONTENEDOR GENERAL
+=============================== */
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 60px 20px;
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+
+  font-size: 32px;
+}
+
+
+/* ===============================
+ GRID PRINCIPAL
+=============================== */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+/* ===============================
+ IMAGEN
+=============================== */
+
+.about-img img {
+  width: 100%;
+
+  border-radius: 8px;
+
+  object-fit: cover;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+/* ===============================
+ INFO
+=============================== */
+
+.about-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-info h3 {
+  font-size: 18px;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.about-info p {
+  color: #444;
+
+  line-height: 1.6;
+
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+ CONTACTO
+=============================== */
+
+.about-contacto {
+  list-style: none;
+
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.about-contacto li {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+}
+
+
+/* ===============================
+ REDES
+=============================== */
+
+.about-redes {
+  display: flex;
+
+  gap: 15px;
+}
+
+.about-redes a {
+  text-decoration: none;
+
+  padding: 8px 16px;
+
+  border: 1px solid #000;
+
+  color: #000;
+
+  font-size: 14px;
+
+  border-radius: 4px;
+
+  transition: all 0.2s ease;
+}
+
+.about-redes a:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* ===============================
+ RESPONSIVE
+=============================== */
+
+@media (max-width: 900px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    padding: 40px 15px;
+  }
+
+  .about-container h1 {
+    font-size: 26px;
+  }
+
+  .about-info h2 {
+    font-size: 22px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .about-container {
+    padding: 30px 12px;
+  }
+
+  .about-redes {
+    flex-direction: column;
+  }
+
+  .about-redes a {
+    text-align: center;
+  }
+
+}

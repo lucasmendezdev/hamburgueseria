@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HAMBURGUESERIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/header.css">
+  
+  
+</head>
+<body>
+
+<header class="header">
+  <div class="header__logo">
+    <a href="index.html">HAMBURGUESERIA</a>
+  </div>
+
+  <nav class="header__nav">
+    <a href="index.html">Inicio</a>
+    <a href="menu.html">Menú</a>
+    <a href="carrito.html">
+      Carrito <span id="contadorCarrito">0</span>
+    </a>
+  </nav>
+</header>
+
+
+<!-- ===============================
+     DATOS CLIENTE
+=============================== -->
+
+<div class="datos-cliente">
+
+  <h3>Datos del Cliente</h3>
+
+  <input 
+    type="text"
+    id="nombreCliente"
+    placeholder="Tu nombre"
+  >
+
+  <input 
+    type="tel"
+    id="telefonoCliente"
+    placeholder="Tu teléfono"
+  >
+
+
+  <!-- ENTREGA -->
+
+  <div class="entrega-box">
+
+    <label>
+      <input type="radio" name="entrega" value="retiro" checked>
+      Retiro en local
+    </label>
+
+    <label>
+      <input type="radio" name="entrega" value="envio">
+      Envío a domicilio
+    </label>
+
+  </div>
+
+
+  <!-- DIRECCION -->
+
+  <input
+    type="text"
+    id="direccionCliente"
+    placeholder="Dirección de envío"
+    disabled
+  >
+
+
+  <!-- OBS -->
+
+  <textarea
+    id="obsCliente"
+    placeholder="Observaciones (opcional)"
+  ></textarea>
+
+
+  <button id="btnConfirmar" class="btn-confirmar">
+  Confirmar Pedido por WhatsApp
+  </button>
+
+
+</div>
+
+
+<!-- ===============================
+ FOOTER
+================================ -->
+
+<footer class="footer">
+  <p>© 2026 - HAMBURGUESERIA</p>
+</footer>
+
+
+<script src="js/index.js"></script>
+<script src="js/header.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
